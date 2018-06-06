@@ -1,2 +1,2 @@
-# pensieve-app
+# Pensieve
 Personal diary with emotion analytics
