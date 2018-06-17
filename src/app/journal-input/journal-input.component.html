@@ -1,6 +1,8 @@
-<div>
-    <textarea [(ngModel)]="journal"></textarea>
-</div>
-<div>
-    <h1>{{ journal }}</h1>
+<div class="container-fluid">
+    <div id="journal-container" class="journal-format">
+        {{journalInput}}
+    </div>
+    <div id="journal-input">
+        <textarea [(ngModel)]="journalInput" class="journal-format"></textarea>
+    </div>
 </div>
