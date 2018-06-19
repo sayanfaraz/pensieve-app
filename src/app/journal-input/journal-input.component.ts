@@ -15,6 +15,22 @@ export class JournalInputComponent implements OnInit {
     ngOnInit() {
     }
 
+    // processInput(event: InputEvent) {
+    processInput(event: any) {
+        let journalContainer = event.target;
+        // let currentCursorPos = journalContainer.prop("selectionStart");
+        this.journalInput = journalContainer.textContent;
+        let journalInputInnerHtml: String = "<b>"
+        journalInputInnerHtml += journalContainer.innerHTML;
+        journalInputInnerHtml += "</b>";
+        journalContainer.innerHTML = journalInputInnerHtml;
+        journalContainer.focus();
+        journalContainer.setSelectionRange(2, 2);
+        // journalContainer.setCursorPosition(2);
+        // this.journalInput = event.target.value;
+        // this.journalInput = journalInputInnerHtml;
+    }
+
     // ngOnChanges(changes: SimpleChanges) {
     //     // let shuffledJournal: String[] = this.shuffle(this.journalInput.split(" "));
     //     // this.journalOutput = shuffledJournal.join(" ");
@@ -40,3 +56,5 @@ export class JournalInputComponent implements OnInit {
         return retArr;
     }
 }
+
+

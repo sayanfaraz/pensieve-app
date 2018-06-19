@@ -1,10 +1,15 @@
+#journal-container {
+    padding: 10vh 10vw 10vh 10vw;
+    /* width: 100vw; */
+}
+
 #journal-input {
     /* top: 0;
     left: 0; */
     position: fixed;
     z-index: 2;
 
-    width: 100%;
+    width: 80vw;
 }
 #journal-input > textarea {
     width: 100%;
@@ -17,8 +22,8 @@
     background-color: rgba(0,0,0,0);
   }
 
-#journal-container {
-    width: 100%;
+#journal-text {
+    width: 80vw;
     height: 50vh;
 
     z-index: 1;
@@ -32,5 +37,6 @@
 
 .journal-format {
     font-family: 'Encode Sans Condensed', Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: 12pt;
 }

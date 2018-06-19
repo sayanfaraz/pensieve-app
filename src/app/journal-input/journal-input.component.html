@@ -1,8 +1,18 @@
-<div class="container-fluid">
-    <div id="journal-container" class="journal-format">
-        {{journalInput}}
-    </div>
-    <div id="journal-input">
-        <textarea [(ngModel)]="journalInput" class="journal-format"></textarea>
+<!-- <div id="journal-container" class="container-fluid"> -->
+    <!-- <div class="row"> -->
+        <!-- <div id="journal-text" class="journal-format">
+            {{journalInput}}
+        </div>
+        <div id="journal-input">
+            <textarea [(ngModel)]="journalInput" class="journal-format"></textarea>
+        </div> -->
+    <!-- </div> -->
+<!-- </div> -->
+<div id="journal-container">
+    <!-- <div contenteditable="true" [textContent]="journalInput" (input)="journalInput=$event.target.textContent"></div> -->
+    <div class="row journal-format" contenteditable="true" (input)="processInput($event)"></div>
+    <div>
+        <p>{{journalInput}}</p>
     </div>
 </div>
+
